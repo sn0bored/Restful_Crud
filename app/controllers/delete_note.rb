@@ -1,5 +1,6 @@
 get '/delete_note' do
 
-"Deleting Note"
+#logic to delete note from model
+erb :login
 end
 

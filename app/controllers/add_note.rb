@@ -1,5 +1,6 @@
 
 post '/add_note' do
 
-"Adding notes"
+#logic to add note to model
+erb :login
 end

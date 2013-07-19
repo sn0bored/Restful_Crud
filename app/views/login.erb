@@ -1,6 +1,11 @@
 <div class="container">
   <h1>Your Notes</h1>
 
+  <% if current_user %>
+  <h2><%= user_name %></h2>
+  <a href='/logout'>Logout</a>
+  <% end %>
+
   <h3>What would you like to do?</h3>
 
  <p> Add a Note? <p>
@@ -19,6 +24,18 @@
     <input type="submit" value="Delete It!">
   </form>
 
+  <br>
+
+  <h2> Here are your notes: </h2>
+
+  <% if @all_notes %>
+   <%= @list %>
+  <% end %>
+
+
+
 </div>
+
+
 
 
