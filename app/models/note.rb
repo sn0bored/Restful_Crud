@@ -1,3 +1,6 @@
 class Note < ActiveRecord::Base
-  # Remember to create a migration!
+  
+  belongs_to :user
+  validates :description, presence: true
+
 end
