@@ -1,11 +1,11 @@
 helpers do
 
   def current_user
-    session[:id]
+    @current ||= User.find_by_id(session[:user_id])
   end
 
-  def user_name
-    User.find(current_user).name
+  def logged_in?
+    !current_user.nil?
   end
 
 end

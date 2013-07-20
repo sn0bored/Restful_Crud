@@ -1,0 +1,41 @@
+<div class="container">
+  <h1>Your Notes</h1>
+
+  <h2><%= @user.name %></h2>
+  <a href='/logout'>Logout</a>
+
+  <h3>What would you like to do?</h3>
+
+ <p> Add a Note? <p>
+
+ <form action="/add_note" method="post">
+    <input type="text" placeholder="Description of your note" name="note">
+    <input type="submit" value="Add It!">
+  </form>
+ 
+  <br>  
+ 
+ <p> Delete Note? <p>
+
+  <form action="/delete_note" method="delete">
+    Which Id #?: <input type="text" name="user_id">
+    <input type="submit" value="Delete It!">
+  </form>
+
+  <br>
+
+  <h2> Here are your notes: </h2>
+
+  <div class="decks">
+    <% if @notes %>
+      <% @notes.each do |note| %>
+      <p><%= note.id %>: <%= note.description %></p>  
+      <%end%>
+    <% end %> 
+  </div>
+
+</div>
+
+
+
+
