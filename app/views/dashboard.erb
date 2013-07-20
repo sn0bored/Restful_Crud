@@ -13,23 +13,28 @@
     <input type="submit" value="Add It!">
   </form>
  
-  <br>  
- 
- <p> Delete Note? <p>
-
-  <form action="/delete_note" method="delete">
-    Which Id #?: <input type="text" name="user_id">
-    <input type="submit" value="Delete It!">
-  </form>
-
   <br>
 
-  <h2> Here are your notes: </h2>
+  <h2> Your notes: </h2>
 
   <div class="decks">
     <% if @notes %>
       <% @notes.each do |note| %>
-      <p><%= note.id %>: <%= note.description %></p>  
+      <p><%= note.id %>: <%= note.description %></p> 
+
+        <form action="/update_note" method="put">
+          <input type="hidden" value="<%= note.id %>" name="note_id">
+          <input type="submit" value="Change It!">
+        </form>
+
+        <br>
+        
+        <form action="/delete_note" method="delete">
+          <input type="hidden" value="<%= note.id %>"  name="note_id">
+          <input type="submit" value="Delete It!">
+          </form>
+      
+      <br>  
       <%end%>
     <% end %> 
   </div>
