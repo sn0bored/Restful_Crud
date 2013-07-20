@@ -2,11 +2,9 @@
   <h1>Your Notes</h1>
 
   <h2><%= @user.name %></h2>
-  <a href='/logout'>Logout</a>
+    <a href='/logout'>Logout</a>
 
   <h3>What would you like to do?</h3>
-
- <p> Add a Note? <p>
 
  <form action="/add_note" method="post">
     <input type="text" placeholder="Description of your note" name="note">
@@ -15,23 +13,21 @@
  
   <br>
 
-  <h2> Your notes: </h2>
+  <h3> Your notes: </h3>
 
   <div class="decks">
     <% if @notes %>
       <% @notes.each do |note| %>
-      <p><%= note.id %>: <%= note.description %></p> 
+      <p> <%= note.description %></p> 
 
         <form action="/update_note" method="put">
           <input type="hidden" value="<%= note.id %>" name="note_id">
-          <input type="submit" value="Change It!">
+          <input class = 'change_it' type="submit" value="Change It!">
         </form>
-
-        <br>
         
         <form action="/delete_note" method="delete">
           <input type="hidden" value="<%= note.id %>"  name="note_id">
-          <input type="submit" value="Delete It!">
+          <input class = 'delete_it' type="submit" value="Delete It!">
           </form>
       
       <br>  

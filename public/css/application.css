@@ -1,10 +1,37 @@
 .container {
   margin: 20px auto;
-  width: 600px;
+  width: 90%;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
   background: #eee;
 }
 th {
   text-align: left;
+}
+
+h2{
+	padding: 0;
+	margin-right: 0;
+}
+
+p{
+	background-color: white;
+	width: 65%;
+}
+
+form{
+	float: left;
+	padding-right: 4%;
+}
+
+.change_it{
+    background-color: blue;
+	color: white;
+	float: right;
+}
+
+.delete_it{
+	background-color: red;
+	color: white;
+	float: right;
 }
