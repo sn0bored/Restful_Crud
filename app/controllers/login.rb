@@ -1,12 +1,10 @@
 enable :sessions
 
 
-
 post '/login' do
   #p params
   @user = User.find_by_name(params[:name])
   session[:id] = @user.id
-  session[:name] = @user.name
   @list = []
   @all_notes = Note.all
   @all_notes.each do |note|

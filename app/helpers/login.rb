@@ -5,7 +5,7 @@ helpers do
   end
 
   def user_name
-    session[:name]
+    User.find(current_user).name
   end
 
 end
