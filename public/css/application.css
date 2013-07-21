@@ -1,10 +1,18 @@
-.container {
+.container{
+	background: blue;
+	height: 720px;
+}
+
+.box {
+  text-align: center;
   margin: 20px auto;
   width: 90%;
+  height: 720px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
   background: #eee;
 }
+
 th {
   text-align: left;
 }
@@ -14,14 +22,25 @@ h2{
 	margin-right: 0;
 }
 
+h4{
+	padding-bottom: 3%
+}
+
 p{
+	text-align: center;
 	background-color: white;
-	width: 65%;
+	width: 100%;
+	padding: 0;
 }
 
 form{
-	float: left;
-	padding-right: 4%;
+	text-align: center;
+	padding-right: 10%;
+	display: inline-block;
+}
+
+.decks{
+	text-align: center;
 }
 
 .change_it{

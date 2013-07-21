@@ -1,20 +1,22 @@
 <div class="container">
+  
+  <div class="box">
+
   <h1>Welcome to Your Notepad:</h1>
 
-  <p>Login or create new account.</p>
+  <h4>Login or create new account</h4>
  
-  <form action="/login" method="post">
+  <form class = "login" action="/login" method="post">
     Welcome Back: <input type="text" name="name">
     <input type="hidden" name='id' value='<%= current_user%>'>
     <input type="submit" value="Login">
   </form>
 
-  <br>
-
-  <form action="/create" method="post">
+  <form class = "create" action="/create" method="post">
     Enter Your Name: <input type="text" name="name">
     <input type="hidden" name='id' value='<%= current_user%>'>
     <input type="submit" value="Create">
   </form>
-  
+  </div>
+
 </div>
