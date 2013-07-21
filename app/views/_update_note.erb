@@ -1,6 +1,9 @@
+<p> Update your note below and press enter <p>
+
 <div class="update_note">
-   <form action="/update_note" method="put">
+   <form action="/update_note" method="post">
    <input type='text' placeholder="Description" name="new_note">
+   <input type = 'hidden' value="<%= params[:note_id]%>" name="note_id"
    <input type="submit" value="Update">
    </form>
 </div>

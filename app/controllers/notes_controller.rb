@@ -8,12 +8,14 @@ end
 get '/delete_note' do
   note = Note.destroy(params[:note_id])
   redirect '/'
-erb :login
 end
+
 
 get '/update_note' do
-  erb :update_note 
+  erb :_update_note
 end
 
-
-
+post '/update_note' do
+  Note.update(params[:note_id], description: params[:new_note])
+  redirect '/'
+end
