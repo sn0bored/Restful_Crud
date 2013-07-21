@@ -20,16 +20,20 @@
       <% @notes.each do |note| %>
       <p> <%= note.description %></p> 
 
-        <form action="/update_note" method="put">
+        <form action="/_update_note" method="put">
           <input type="hidden" value="<%= note.id %>" name="note_id">
           <input class = 'change_it' type="submit" value="Change It!">
         </form>
+
+        <div id="partial">
+          <%= erb :_update_note, :layout => false %>  
+        </div>
         
         <form action="/delete_note" method="delete">
           <input type="hidden" value="<%= note.id %>"  name="note_id">
           <input class = 'delete_it' type="submit" value="Delete It!">
           </form>
-      
+
       <br>  
       <%end%>
     <% end %> 

@@ -12,7 +12,7 @@ erb :login
 end
 
 get '/update_note' do
-  
+  erb :update_note 
 end
 
 
